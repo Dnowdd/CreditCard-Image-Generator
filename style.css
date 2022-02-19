@@ -1,0 +1,344 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500;600;700;800;900&display=swap');
+
+:root{
+    --card-color-1: #cb2d3e;
+    --card-color-2: #ef4744;
+    --input-size: 300px;
+    --input-color: #2832c3;
+}
+
+*{
+    background-color: transparent;
+    border: 0;
+    margin: 0;
+    padding: 0;
+    outline: none;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    background-color: rgb(223, 223, 223);
+}
+.space{
+    width: 1px;
+    height: 350px;
+    position: relative;
+}
+header{
+    width: 100%;
+    height: 250px;
+    position: fixed;
+    top: 0;
+
+    z-index: 3;
+
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* CARD */
+.cardBg{
+    margin: 0 auto;
+
+    width: 500px;
+    height: 300px;
+
+    border-radius: 10px;
+    
+    position: fixed;
+    top: 25px;
+    left: 50%;
+    margin-left: -250px;
+
+    z-index: 4;
+
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+}
+.card{
+    margin: 0 auto;
+
+    width: 500px;
+    height: 300px;
+
+    border-radius: 10px;
+    
+    position: fixed;
+    top: 25px;
+    left: 50%;
+    margin-left: -250px;
+
+    z-index: 5;
+
+    background: var(--card-color-1);
+    background: -moz-linear-gradient(150deg, var(--card-color-2) 0%, var(--card-color-2) 100%);
+    background: -webkit-linear-gradient(150deg, var(--card-color-1) 0%, var(--card-color-2) 100%);
+    background: linear-gradient(150deg, var(--card-color-1) 0%, var(--card-color-2) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#cb2d3e",endColorstr="#ef4744",GradientType=1);
+}
+
+.card > .bank{
+    position: absolute;
+    top: 10px;
+    right: 20px;
+}
+.card > .bank > span{
+    font-family: 'Maven Pro', sans-serif;
+    font-weight: 700;
+    font-size: 45px;
+
+    color: white;
+}
+
+.card > .chip {
+    position: absolute;
+
+    top: 45%;
+
+    width: 50px;
+    height: 40px;
+    background: rgb(207,178,44);
+    background: linear-gradient(150deg, rgba(207,178,44,1) 0%, rgba(255,224,100,1) 31%, rgba(235,188,65,1) 100%);
+    border-radius: 5px;
+
+    transform: translate(33px, -40px);
+    overflow: hidden;
+}
+
+.chip-risk {
+    width: 50px;
+    height: 40px;
+    border-radius: 10px;
+    border: 1px solid rgb(228, 228, 228);
+    position: absolute;
+    z-index: 0;
+}
+
+#chip-1 {
+    transform: translate(37px, 15px);
+}
+#chip-2 {
+    transform: translate(15px, 30px);
+}
+#chip-3 {
+    transform: translate(-37px, -15px);
+}
+#chip-4 {
+    transform: translate(-15px, -30px);
+}
+
+.card > .number{
+    position: absolute;
+    top: 50%;
+    left: 30px;
+
+    width: 70%;
+}
+.card > .number > span{
+    font-size: 30px;
+    font-weight: 500;
+    
+    background-color: rgb(204, 204, 204);
+    color: transparent;
+    text-shadow: -1px -1px 1px rgba(255, 255, 255, 0.2);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+}
+.card > .number > span + span{
+    margin-left: 15px;
+}
+
+.card > .valid{
+    position: absolute;
+    top: 63%;
+    left: 30px;
+
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 10px;
+    align-items: center;
+}
+.card > .valid > p{
+    text-align: center;
+    background-color: rgb(231, 231, 231, 0.7);
+    color: transparent;
+    text-shadow: -1px -1px 1px rgba(255, 255, 255, 0.2);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+}
+.card > .valid > p > span{
+    text-align: right;
+    display: block;
+    font-size: 10px;
+}
+.card > .valid > p > span:last-child{
+    font-size: 9px;
+}
+.card > .valid > h1{
+    background-color: rgba(255, 255, 255, 0.7);
+    color: transparent;
+    text-shadow: -1px -1px 1px rgba(255, 255, 255, 0.2);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+
+    font-size: 20px;
+}
+
+.card > .name{
+    position: absolute;
+    top: 75%;
+    left: 30px;
+    width: 70%;
+}
+.card > .name > span{
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    word-spacing: 10px;
+    
+    background-color: rgb(204, 204, 204);
+    color: transparent;
+    text-shadow: -1px -1px 1px rgba(255, 255, 255, 0.2);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+}
+.card > .flag{
+    position: absolute;
+    bottom: 10px;
+    right: 15px;
+}
+.card > .flag > img{
+    width: 66.6666666667px;
+    height: 50px;
+}
+
+
+
+/* INPUT AREA */
+.details{
+    margin: 50px 0;
+    font-weight: 200;
+    display: grid;
+    justify-content: center;
+}
+.details .input-data{
+    height: 40px;
+    width: var(--input-size);
+    position: relative;
+    margin: 20px 0;
+}
+.details .input-data input{
+    width: var(--input-size);
+    font-size: 17px;
+    border-bottom: thin solid var(--input-color);
+    padding: 3px 0;
+    padding-left: 3px;
+}
+.details .input-data label{
+    position: absolute;
+    bottom: 40px;
+    left: 2px;
+    
+    color: var(--input-color);
+
+    transition: ease-in-out 0.3s;
+
+    cursor: text;
+}
+.details .input-data input:placeholder-shown ~ label{
+    bottom: 18px;
+    left: 2px;
+}
+.details .input-data input:placeholder-shown{
+    padding-left: 1px;
+}
+.details .input-data .inputFlag{
+    width: 80px;
+}
+
+.details .numberInput{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr auto;
+}
+
+.details .numberInput input{
+    display: inline;
+    width: 50px;
+}
+
+.details .colorInput{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.details .colorInput input{
+    display: inline;
+    width: 90%;
+    border-bottom: thin solid var(--card-color-1);
+}
+.details .colorInput label{
+    color: var(--card-color-1);
+}
+.details .colorInput input:last-child{
+    border-bottom: thin solid var(--card-color-2);
+}
+
+/* FOOTER */
+footer{
+    padding: 20px 10px;
+    text-align: center;
+
+    font-weight: 200;
+}
+
+
+/* GITHUB CORNER FROM https://github.com/tholman/github-corners */
+
+.github-corner{
+    position: fixed;
+    z-index: 5;
+}
+.github-corner:hover .octo-arm {
+    animation: octocat-wave 560ms ease-in-out;
+}
+
+@keyframes octocat-wave {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    20% {
+        transform: rotate(-25deg);
+    }
+
+    40% {
+        transform: rotate(10deg);
+    }
+
+    60% {
+        transform: rotate(-25deg);
+    }
+
+    80% {
+        transform: rotate(10deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+@media (max-width: 500px) {
+    .github-corner:hover .octo-arm {
+        animation: none;
+    }
+
+    .github-corner .octo-arm {
+        animation: octocat-wave 560ms ease-in-out;
+    }
+}

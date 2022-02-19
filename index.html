@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Credit Card Generator</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+
+    <a href="https://github.com/Dnowdd/CreditCard-Image-Generator" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#151513; color:#dfdfdf; position: absolute; top: 0; border: 0; left: 0; transform: scale(-1, 1);" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+
+    <div class="space"></div>
+
+    <header></header>
+
+    <div class="cardBg"></div>
+
+    <div class="card" id="card">
+        <div class="bank">
+            <span id="cardBank">RIFTMAKER</span>
+        </div>
+
+        <div class="chip">
+            <div class="chip-risk" id="chip-1"></div>
+            <div class="chip-risk" id="chip-2"></div>
+            <div class="chip-risk" id="chip-3"></div>
+            <div class="chip-risk" id="chip-4"></div>
+        </div>
+
+        <div class="number">
+            <span id="cardNumber-1">1111</span>
+            <span id="cardNumber-2">2222</span>
+            <span id="cardNumber-3">3333</span>
+            <span id="cardNumber-4">4444</span>
+        </div>
+
+        <div class="valid">
+            <p>
+                <span>GOOD</span>
+                <span>THRU</span>
+            </p>
+            <h1 id="cardValid">05/30</h1>
+        </div>
+
+        <div class="name">
+            <span id="cardName">DAVID A QUEIROZ</span>
+        </div>
+
+        <div class="flag">
+            <img src="flags/mastercard.png" id="flag" alt="Card Flag">
+        </div>
+    </div>
+
+    <div class="details">
+        <div class="input-data">
+            <input value="DAVID A QUEIROZ" maxlength="20" placeholder=" " id="name" onkeyup="setDetail('name','cardName')" onclick="setDetail('name','cardName')" type="text" autocomplete="off" autocapitalize="off" spellcheck="false" autofocus="off">
+            <label for="name">Name:</label>
+        </div>
+
+        <div class="input-data numberInput">
+            <div>
+                <input value="1111" maxlength="4" placeholder=" " id="number-1" onkeyup="setDetail('number-1','cardNumber-1')" onclick="setDetail('number-1','cardNumber-1')" type="text" autocomplete="off" autocapitalize="off" spellcheck="false" autofocus="off">
+                <label for="number-1">Number:</label>
+            </div>
+
+            <div>
+                <input value="2222" maxlength="4" placeholder=" " id="number-2" onkeyup="setDetail('number-2','cardNumber-2')" onclick="setDetail('number-2','cardNumber-2')" type="text" autocomplete="off" autocapitalize="off" spellcheck="false" autofocus="off">
+            </div>
+
+            <div>
+                <input value="3333" maxlength="4" placeholder=" " id="number-3" onkeyup="setDetail('number-3','cardNumber-3')" onclick="setDetail('number-3','cardNumber-3')" type="text" autocomplete="off" autocapitalize="off" spellcheck="false" autofocus="off">
+            </div>
+
+            <div>
+                <input value="4444" maxlength="4" placeholder=" " id="number-4" onkeyup="setDetail('number-4','cardNumber-4')" onclick="setDetail('number-4','cardNumber-4')" type="text" autocomplete="off" autocapitalize="off" spellcheck="false" autofocus="off">
+            </div>
+        </div>
+
+        <div class="input-data">
+            <input value="05/30" maxlength="15" placeholder=" " id="valid" onkeyup="setDetail('valid','cardValid')" onclick="setDetail('valid','cardValid')" type="text" autocomplete="off" autocapitalize="off" spellcheck="false" autofocus="off">
+            <label for="valid">Valid Thru (m/y):</label>
+        </div>
+
+        <div class="input-data">
+            <input value="RIFTMAKER" maxlength="10" placeholder=" " id="bank" onkeyup="setDetail('bank','cardBank')" onclick="setDetail('bank','cardBank')" type="text" autocomplete="off" autocapitalize="off" spellcheck="false" autofocus="off">
+            <label for="bank">Bank Name:</label>
+        </div>
+
+        <div class="input-data colorInput">
+            <div>
+                <input maxlength="7" placeholder=" " value="#cb2d3e" id="color-1" onkeyup="setColor('color-1','1')" onclick="setDetail('color-1','1')" type="text" autocomplete="off" autocapitalize="off" spellcheck="false" autofocus="off">
+                <label for="color-1">Color:</label>
+            </div>
+
+            <div>
+                <input maxlength="7" placeholder=" " value="#ef4744" id="color-2" onkeyup="setColor('color-2','2')" onclick="setDetail('color-2','2')" type="text" autocomplete="off" autocapitalize="off" spellcheck="false" autofocus="off">
+            </div>
+        </div>
+
+        <div class="input-data">
+            <input type="file" id="cgFlag" onchange="fileReader('cgFlag','inputFlag','flag')" accept=".png, .jpeg, .jpg" hidden>
+            <label>Change Flag:</label>
+            <input onclick="openFileInput('cgFlag')" type="image" id="inputFlag" src="flags/mastercard.png" class="inputFlag" alt="Flag">
+        </div>
+    </div>
+
+    <footer>
+        <p>Made with &#10084;&#65039;, David Aquino.</p>
+    </footer>
+</body>
+</html>
