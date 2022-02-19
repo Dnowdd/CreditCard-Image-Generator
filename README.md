@@ -2,6 +2,8 @@
 
 ### This is a simple HTML, CSS and JS project to make a fake credit card, allowing the user to change everything they want.
 
+## Link to [DEMO](https://dnowdd.github.io/CreditCard-Image-Generator/) 
+
 ## Options to change:
 
 + Your Name
@@ -10,6 +12,10 @@
 + Expiration Date
 + Gradient Card Color
 + Card Flag
+
+<p align="center">
+    <img src="/images/Card-Examples.gif" style="width: 500px;">
+</p>
 
 ## Technologies Used:
 
@@ -32,6 +38,10 @@
 2) Open the index.html in navigator
 3) Enjoy yourself!
 
+<p align="center">
+    <img src="/images/Card-Flags.png" style="width: 500px;">
+</p>
+
 ## This features are in developing:
 
 - Download the card image
@@ -39,11 +49,9 @@
 - Customize the location of elements
 - 3D mockup examples
 
-<center>
-    <img src="/images/Card-Flags.png">
-    <img src="/images/Changing-Card.gif">
-    <img src="/images/Card-Examples.gif">
-</center>
+<p align="center">
+    <img src="/images/Changing-Card.gif" style="width: 500px;">
+</p>
 
 ## Thank You!
 
