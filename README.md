@@ -24,11 +24,15 @@
         <td>HTML</td>
         <td>CSS</td>
         <td>JS</td>
+        <td>Vanilla Tilt</td>
+        <td>JQuery</td>
     </tr>
     <tr>
         <td>5</td>
         <td>3</td>
         <td>ES6</td>
+        <td>latest.min</td>
+        <td>3.6.4.min</td>
     </tr>
 </table>
 
@@ -48,6 +52,7 @@
 - More color customization
 - Customize the location of elements
 - 3D mockup examples
+- 3D card follow mouse cursor - added
 
 <p align="center">
     <img src="/images/Changing-Card.gif" style="width: 500px;">
