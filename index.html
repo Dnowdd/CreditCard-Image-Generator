@@ -16,9 +16,9 @@
 
     <header></header>
 
-    <div class="cardBg"></div>
+    <div class="cardBg" data-tilt data-tilt-scale="1" data-tilt-max="7" data-tilt-full-page-listening data-tilt-reset="false" data-tilt-reverse="true"></div>
 
-    <div class="card" id="card">
+    <div class="card" id="card" data-tilt data-tilt-scale="1" data-tilt-max="7" data-tilt-full-page-listening data-tilt-reset="false" data-tilt-reverse="true" data-tilt-glare data-tilt-max-glare="0.1">
         <div class="bank">
             <span id="cardBank">RIFTMAKER</span>
         </div>
@@ -92,7 +92,7 @@
         <div class="input-data colorInput">
             <div>
                 <input maxlength="7" placeholder=" " value="#cb2d3e" id="color-1" onkeyup="setColor('color-1','1')" onclick="setDetail('color-1','1')" type="text" autocomplete="off" autocapitalize="off" spellcheck="false" autofocus="off">
-                <label for="color-1">Color:</label>
+                <label for="color-1">Color Gradient:</label>
             </div>
 
             <div>
@@ -110,5 +110,8 @@
     <footer>
         <p>Made with &#10084;&#65039;, David Aquino.</p>
     </footer>
+
+    <script src="vanilla-tilt.min.js"></script>
+    <script src="jquery-3.6.4.min.js"></script>
 </body>
 </html>

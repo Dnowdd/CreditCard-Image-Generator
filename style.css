@@ -72,6 +72,8 @@ header{
 
     z-index: 5;
 
+    user-select: none;
+
     background: var(--card-color-1);
     background: -moz-linear-gradient(150deg, var(--card-color-2) 0%, var(--card-color-2) 100%);
     background: -webkit-linear-gradient(150deg, var(--card-color-1) 0%, var(--card-color-2) 100%);
